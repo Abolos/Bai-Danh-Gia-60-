@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+ }
+ 
+ 
+ header nav {
+    width: 100%;
+    min-height: 70px;
+    background-color: #000;
+ }
+ 
+ header nav .logo {
+     font-family: cursive;
+     color:#ffa800;
+     line-height: 70px;
+     font-size: 30px;
+     border-bottom:solid 4px #ffa800 ;
+     font-weight: bolder;
+ }
+ 
+ header nav .nav_item li a {
+     color: #fff;
+     line-height: 70px;
+     font-size: 17px;
+     margin-left: 20px;
+ }
+ 
+ header nav div {
+     display: flex; 
+     margin-left: 10%;
+     margin-right: 10%;
+     justify-content: space-between; 
+     flex-wrap: wrap;
+ }
+ 
+ header nav div .nav_item {
+     display: flex;
+     flex-wrap: wrap;
+ }
+ 
+ 
+ header nav .nav_item li a.chu {
+     position:relative;
+ }
+
+ header nav .nav_item li a.chu:after {
+     content: ' ';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     width: 0%;
+     height: 1px;
+     background: #ffa800;
+     transition: 0.4s;
+ }
+ 
+ header nav .nav_item li a.chu:hover:after {
+     width: 100%;
+     left: 0;
+ }
+ 
+ header nav .nav_item li a.chu_1:after{
+     content: ' ';
+     position: absolute;
+     bottom: 0;
+     left:0;
+     width: 100%;
+     height: 1px;
+     background: #ffa800;
+     transition: 0.4s;
+ }
+ 
+ @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --primary-color: #1a2c50;
+  --secondary-color: #f4f7fe;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --extra-light: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ main{
+  /* font-family: 'Noto Serif', serif; */
+  font-family:'Times New Roman', Times, serif;
+  color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.section__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header p {
+  letter-spacing: 2px;
+  color: #ffa800;
+  font-size: 30px;
+  font-weight: 500;
+  font-weight: bolder;
+}
+
+.header h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.testimonials__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  background-color: var(--extra-light);
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: gold;
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card hr {
+  width: 40px;
+  margin: auto;
+  color: var(--text-light);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.card .name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.card .name:hover {
+  color: var(--primary-color);
+}
+
+.footer h4 {
+  font-family: "Noto Serif", serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  max-width: 450px;
+  margin: auto;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer button {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+@media (width < 900px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (width < 600px) {
+  .testimonials__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

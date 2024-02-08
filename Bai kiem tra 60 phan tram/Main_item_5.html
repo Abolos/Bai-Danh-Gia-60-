@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai Đánh Giá 60%</title>
+    <link rel="icon" href="Icon web.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Main_item_5.css">
+</head>
+<body>
+    <header>
+       <nav>
+            <div>
+                <label class="logo" for="">Tran Quan</label>
+
+                <ul class="nav_item" >
+                    <li><a class="chu" href="Main.html"><span><i style="color:#ffa800;" class="fa-solid fa-house"></i> Home</span></a></li>
+                    <li><a class="chu" href="Main_item_1.html"><span><i style="color:#ffa800;" class="fa-solid fa-user"></i> About</span></a></li>
+                    <li><a class="chu" href="Main_item_2.html"><span><i style="color:#ffa800;" class="fa-solid fa-briefcase"></i> Portfolio of Work</span></a></li>
+                    <li><a class="chu" href="Main_item_3.html"><span><i style="color:#ffa800;" class="fa-brands fa-servicestack"></i> Services</span></a></li>
+                    <li><a class="chu" href="Main_item_4.html"><span><i style="color:#ffa800;" class="fa-solid fa-address-book"></i> Testimonials</span></a></li>
+                    <li><a class="chu chu_1" href="Main_item_5.html"><span><i style="color:#ffa800;" class="fa-regular fa-address-card"></i> Contact</span></a></li>
+                </ul>
+            </div>   
+       </nav>
+    </header>
+
+    <div class="container">
+        <span class="big-circle"></span>
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <p class="text">
+                Thank you for taking the time to look over my website. If you have any problems, please contact me through the following forms
+            </p>
+  
+            <div class="info">
+              <div class="information">
+                <p>98 Dương Quản Hàm, Quan Hoa, Cầu Giấy, Hà Nội</p>
+              </div>
+              <div class="information">
+                <p>Tranquan@gmail.com</p>
+              </div>
+              <div class="information">
+                <p>0396-865-585</p>
+              </div>
+            </div>
+  
+            <div class="social-media">
+              <p>Connect with us :</p>
+              <div class="social-icons">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+  
+            <form name="myForm" action="index.html" autocomplete="off"  onsubmit="return validateForm()" method="post">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                <input type="text" name="name" class="input" />
+                <label for="">Username</label>
+                <span>Username</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" />
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" name="phone" class="input" />
+                <label for="">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="message" class="input"></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
+              </div>
+              <input type="submit" value="Send" class="btn" />
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <script src="app.js"></script>
+      <script>
+        function validateForm() {
+        var x;
+        x = document.forms["myForm"]["name"].value;
+        if (x == "") {
+        alert("Vui long nhập họ và tên của bạn");
+        return false;
+        }
+    
+        x = document.forms["myForm"]["email"].value;
+        if (x == "") {
+        alert("Vui long nhập địa chỉ Email của bạn");
+        return false;
+        }
+        x = document.forms["myForm"]["phone"].value;
+        if (x =="" ) {
+        alert("Vui long nhập số điện thoại của bạn");
+        return false;
+        }
+     }
+     </script> 
+</body>
+</html>

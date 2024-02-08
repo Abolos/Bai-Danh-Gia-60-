@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai Đánh Giá 60%</title>
+    <link rel="icon" href="Icon web.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+    <header>
+       <nav>
+            <div>
+                <label class="logo" for="">Tran Quan</label>
+
+                <ul class="nav_item" >
+                    <li><a class="chu_1 chu" href="Main.html"><span><i style="color:#ffa800;" class="fa-solid fa-house"></i> Home</span></a></li>
+                    <li><a class="chu" href="Main_item_1.html"><span><i style="color:#ffa800;" class="fa-solid fa-user"></i> About</span></a></li>
+                    <li><a class="chu" href="Main_item_2.html"><span><i style="color:#ffa800;" class="fa-solid fa-briefcase"></i> Portfolio of Work</span></a></li>
+                    <li><a class="chu" href="Main_item_3.html"><span><i style="color:#ffa800;" class="fa-brands fa-servicestack"></i> Services</span></a></li>
+                    <li><a class="chu" href="Main_item_4.html"><span><i style="color:#ffa800;" class="fa-solid fa-address-book"></i> Testimonials</span></a></li>
+                    <li><a class="chu" href="Main_item_5.html"><span><i style="color:#ffa800;" class="fa-regular fa-address-card"></i> Contact</span></a></li>
+                </ul>   
+            </div>   
+       </nav>
+    </header>  
+    
+    <main>
+       <div class="Main_item">
+           <p>
+            Mục tiêu của tôi là không ngừng học tập, hoàn tiện bản thân
+           ,biến bản thân thành một phiên bản tốt hơn của ngày hôm qua.
+           Không ngừng nỗ lực vì những mục tiêu mình đặt ra, cho tới khi mọi thứ được hoàn thành một cách tốt nhất.<br> 
+           </p>
+
+           <p class="Main_item_2"><a href="Main.html">Click Here</a></p>
+       </div>
+    </main>
+
+    <footer>
+        <p id="typewriter" class="footer_item"></p>
+    </footer>
+</body>
+<script >
+    // Danh sách các câu cần hiển thị
+var sentences = ["WELCOME TO MY WEBSITE"];
+
+var index = 0; // Vị trí của câu hiện tại
+var charIndex = 0; // Vị trí của ký tự hiện tại trong câu
+
+var typewriter = document.getElementById("typewriter");
+
+function type() {
+  // Kiểm tra xem đã viết xong câu hiện tại chưa
+  if (charIndex <= sentences[index].length) {
+    // In từng ký tự lên màn hình
+    typewriter.innerHTML = sentences[index].substr(0, charIndex);
+    charIndex++;
+    setTimeout(type, 100); // Thời gian mỗi ký tự hiển thị (100ms)
+  } else {
+    setTimeout(erase, 1000); // Thời gian chờ sau khi viết xong (1000ms)
+  }
+}
+
+function erase() {
+  // Kiểm tra xem đã xóa xong câu hiện tại chưa
+  if (charIndex >= 0) {
+    // Xóa từng ký tự trên màn hình
+    typewriter.innerHTML = sentences[index].substr(0, charIndex);
+    charIndex--;
+    setTimeout(erase, 50); // Thời gian mỗi ký tự bị xóa (50ms)
+  } else {
+    index++; // Chuyển sang câu tiếp theo trong danh sách
+    if (index >= sentences.length) {
+      index = 0; // Quay lại câu đầu tiên nếu đã hết danh sách
+    }
+    setTimeout(type, 500); // Thời gian chờ trước khi viết câu tiếp theo (500ms)
+  }
+}
+
+type(); // Bắt đầu hiệu ứng đánh máy
+  </script> 
+</html>
